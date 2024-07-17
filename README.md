@@ -1,6 +1,6 @@
-# Advanced Bash-Scripting Guide Learnings
+# Advanced Bash-Scripting Guide Learning's
 
-This repository contains all my learnings related to Bash scripting, inspired by the book "Advanced Bash-Scripting Guide" by Mendel Cooper.
+This repository contains all my learning's related to Bash scripting, inspired by the book "Advanced Bash-Scripting Guide" by Mendel Cooper.
 
 ## Repository Structure
 

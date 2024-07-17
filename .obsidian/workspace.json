@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/String.md",
+                "file": "basic/RE-Glob.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "basic/String.md",
+                "file": "basic/RE-Glob.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "basic/String.md",
+                "file": "basic/RE-Glob.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/String.md"
+                "file": "basic/RE-Glob.md"
               }
             }
           }
@@ -148,8 +148,11 @@
   },
   "active": "52412e65c5b3c4c9",
   "lastOpenFiles": [
-    "basic/Test_operations.md",
     "basic/String.md",
+    "basic/RE-Glob.md",
+    "README.md",
+    "2024-07-14.md",
+    "basic/Test_operations.md",
     "basic/Variables.md",
     "scripts/11-pick-card.sh",
     "scripts/10-timed-input.sh",

@@ -29,6 +29,7 @@ Bash provides various ways to manipulate strings, similar to string functions in
 ### Length of Matching Substring at Beginning of String
 
 - **`expr match "$string" '$substring'`**
+	- So here there is no `()` in the substring so it gives you the number of letters matched.
 - **`expr "$string" : '$substring'`**
 
   ```bash
@@ -76,6 +77,25 @@ Bash provides various ways to manipulate strings, similar to string functions in
   ```bash
   string="Hello, world!"
   expr substr "$string" 8 5  # Outputs: world
+  ```
+
+- **`expr match "$string" '\($substring\)'`**
+
+  Extracts `$substring` at the beginning of `$string`, where `$substring` is a regular expression.
+  Here we are escaping the `()`to be matched literally so we can have the matching string and not the number of matching characters.
+
+  ```bash
+  string="Hello, world!"
+  expr match "$string" '\(Hello\)'  # Outputs: Hello
+  ```
+
+- **`expr "$string" : '\($substring\)'`**
+
+  Extracts `$substring` at the beginning of `$string`, where `$substring` is a regular expression.
+
+  ```bash
+  string="Hello, world!"
+  expr "$string" : '\(Hello\)'  # Outputs: Hello
   ```
 
 ### Substring Removal

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/RE-Glob.md",
+                "file": "basic/Quoting.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "basic/RE-Glob.md",
+                "file": "basic/Quoting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "basic/RE-Glob.md",
+                "file": "basic/Quoting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/RE-Glob.md"
+                "file": "basic/Quoting.md"
               }
             }
           }
@@ -148,17 +148,20 @@
   },
   "active": "52412e65c5b3c4c9",
   "lastOpenFiles": [
-    "basic/String.md",
     "basic/RE-Glob.md",
+    "basic/Shortcuts.md",
+    "basic/SpecialCharacters.md",
+    "basic/String.md",
+    "basic/Test_operations.md",
+    "basic/Variables-CommandSub.md",
+    "basic/Loops.md",
+    "scripts/13-usage.sh",
+    "scripts/113-usage.sh",
     "README.md",
     "2024-07-14.md",
-    "basic/Test_operations.md",
-    "basic/Variables.md",
     "scripts/11-pick-card.sh",
     "scripts/10-timed-input.sh",
     "scripts/9-IFS.sh",
-    "basic/SpecialCharacters.md",
-    "basic/Shortcuts.md",
     "basic/Quoting.md"
   ]
 }

@@ -314,3 +314,89 @@ echo "\$BASHPID inside of subshell = $BASHPID" )  # 9603
 
 - **`$$`**  
   Process ID (PID) of the script itself. The `$$` variable often finds use in scripts to construct "unique" temp file names.
+
+
+# Command Substitution in Bash
+
+Command substitution reassigns the output of a command (or multiple commands) into another context. It effectively inserts the command output into a new location.
+
+## Classic Form: Backquotes
+The classic form of command substitution uses backquotes (`` `...` ``). Commands within backquotes generate command-line text.
+
+### Example
+```bash
+command_output=`echo Hello, World!`
+echo $command_output # Outputs: Hello, World!
+```
+
+### Command Substitution Characteristics
+- Invokes a subshell.
+- May result in word splitting.
+
+### Word Splitting Example
+```bash
+COMMAND `echo a b`  # 2 args: a and b
+COMMAND "`echo a b`"  # 1 arg: "a b"
+COMMAND `echo`  # no arg
+COMMAND "`echo`"  # one empty arg
+```
+
+### Handling Newlines
+Using `echo` to output an unquoted variable set with command substitution removes trailing newline characters, which can cause unexpected results.
+
+```bash
+dir_listing=`ls -l`
+echo $dir_listing
+# Outputs a single line
+
+echo "$dir_listing"
+# Outputs multiple lines, preserving newlines
+```
+
+### Variable Assignment with Command Substitution
+```bash
+variable1=`for i in 1 2 3 4 5
+do
+  echo -n "$i"
+done`
+echo "variable1 = $variable1"  # Outputs: variable1 = 12345
+
+i=0
+variable2=`while [ "$i" -lt 10 ]
+do
+  echo -n "$i"
+  let "i += 1"
+done`
+echo "variable2 = $variable2"  # Outputs: variable2 = 0123456789
+```
+
+## Modern Form: `$()`
+The `$(...)` form has superseded backticks for command substitution.
+
+### Example
+```bash
+output=$(sed -n /"$1"/p $file)
+```
+
+### File Contents Example
+```bash
+File_contents1=$(cat $file1)
+File_contents2=$(<$file2)  # Bash permits this as well
+```
+
+### Handling Backslashes
+The `$(...)` form treats a double backslash differently than backquotes.
+
+```bash
+echo `echo \\`  # Outputs: \
+echo $(echo \\)  # Outputs: \
+```
+
+### Nesting Command Substitution
+The `$(...)` form permits nesting, which is not possible with backquotes.
+
+```bash
+word_count=$(wc -w $(echo * | awk '{print $8}'))
+```
+
+Command substitution is a powerful feature in Bash that allows the output of commands to be used as input in other contexts, enhancing script functionality and flexibility.

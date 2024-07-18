@@ -165,11 +165,32 @@ Bash provides various ways to manipulate strings, similar to string functions in
   echo ${string/#Hello/Hi}  # Outputs: Hi, world!
   ```
 
-- **`${string/%substring/replacement}`**
-  
-  If `$substring` matches back end of `$string`, substitute `$replacement` for `$substring`.
+### String Substitution
+**`${string/%substring/replacement}`**
 
-  ```bash
-  string="Hello, world!"
-  echo ${string/%world!/Universe}  # Outputs: Hello, Universe
-  ```
+If `$substring` matches the back end of `$string`, substitute `$replacement` for `$substring`.
+
+```bash
+string="Hello, world!"
+echo ${string/%world!/Universe}  # Outputs: Hello, Universe
+```
+
+### Variable Name Expansion
+**`${!varprefix*}`**, **`${!varprefix@}`**
+
+Matches names of all previously declared variables beginning with `varprefix`.
+
+### Example
+```bash
+xyz23="foo"
+xyz24="bar"
+
+a=${!xyz*}
+echo "a = $a"  # Outputs: a = xyz23 xyz24
+
+a=${!xyz@}
+echo "a = $a"  # Outputs: a = xyz23 xyz24
+```
+
+- Expands to *names* of declared variables beginning with "xyz".
+- The output shows the names of the variables `xyz23` and `xyz24`.

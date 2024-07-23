@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/Quoting.md",
+                "file": "commands/system-admin.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "basic/Quoting.md",
+                "file": "commands/system-admin.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "basic/Quoting.md",
+                "file": "commands/system-admin.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/Quoting.md"
+                "file": "commands/system-admin.md"
               }
             }
           }
@@ -148,6 +148,15 @@
   },
   "active": "52412e65c5b3c4c9",
   "lastOpenFiles": [
+    "commands/network.md",
+    "commands/job_control.md",
+    "commands/complex.md",
+    "commands/basic.md",
+    "commands/system-admin.md",
+    "scripts/9-ifs.sh",
+    "scripts/16-lowerfilename.sh",
+    "scripts/15-script-detector.sh",
+    "basic/Quoting.md",
     "basic/RE-Glob.md",
     "basic/Shortcuts.md",
     "basic/SpecialCharacters.md",
@@ -161,7 +170,6 @@
     "2024-07-14.md",
     "scripts/11-pick-card.sh",
     "scripts/10-timed-input.sh",
-    "scripts/9-IFS.sh",
-    "basic/Quoting.md"
+    "scripts/9-IFS.sh"
   ]
 }
